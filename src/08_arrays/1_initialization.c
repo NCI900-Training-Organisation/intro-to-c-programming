@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void main()
 {
@@ -33,6 +34,15 @@ void main()
     printf("3 ----> ");
     for(int i = 0; i < 10; i++) {
         printf("%d ", c[i]);
+    }
+    printf("\n ");
+
+
+    char d[10];
+    memset(d, 'a', 10);
+    printf("4 ----> ");
+    for(int i = 0; i < 10; i++) {
+        printf("%c ", d[i]);
     }
     printf("\n ");
 }
