@@ -15,6 +15,6 @@ void main()
     printf("*ptr = %d \n", *ptr); /** print the value in the address stored by ptr */
 
     printf("\nsize of an integer pointer  = %d bytes\n", sizeof(ptr));
-    int *ptr_c = NULL;
+    char *ptr_c = NULL;
     printf("size of a character pointer = %d bytes\n", sizeof(ptr_c));
 }
