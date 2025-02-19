@@ -46,7 +46,7 @@ Running:
 
 ## Variables and Types
 
-C is a types language. Every variable in C is assigned a distinct type that dictates the range of values it can hold, the manner in which its data is stored in memory, and the permissible operations that can be performed on it. 
+C is a typed language. Every variable in C is assigned a distinct type that dictates the range of values it can hold, the manner in which its data is stored in memory, and the permissible operations that can be performed on it. 
 
 | Types         | Size (Bytes)      |
 | ------------- | ----------------- |
