@@ -16,3 +16,9 @@ void main()
     printf("ptr + 1  = %u \n", (ptr_c + 1));
     printf("ptr - 1  = %u \n", (ptr_c - 1));
 }
+
+
+//Todo: pointer while loop
+
+//Todo: void * pointer
+
