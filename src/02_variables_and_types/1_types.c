@@ -1,3 +1,4 @@
+
 /* To code in C, we often need to think in bits and bytes*/
 
 #include <stdio.h>
