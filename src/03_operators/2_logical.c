@@ -1,3 +1,4 @@
+
 /* Same as in python, in C 0 is considered as false and any other number is considered as true. */
 
 /* Truth table of AND operator */
