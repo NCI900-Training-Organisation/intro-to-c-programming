@@ -1,1 +1,0 @@
-gcc -c area.s -o area.o
