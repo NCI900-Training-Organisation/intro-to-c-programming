@@ -1,0 +1,1 @@
+gcc area.o -o area
