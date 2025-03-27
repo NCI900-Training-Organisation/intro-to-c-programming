@@ -9,8 +9,10 @@ void main()
 
     signed short int   a = 32767; 
     unsigned short int b = 65535;
+    unsigned short int b_ = 65536;
 
     printf("Signed %d Unsigned %d \n", a, b);
+    printf("Unsigned %d \n", b_);
 
     signed short int c = 65535;
     unsigned short int   d = -10;
