@@ -58,8 +58,7 @@ C is a typed language. Every variable in C is assigned a distinct type that dict
 | double        |       8           |
 | long double   |       16          |
 
-All variables must be declared before they are used. They must be declared at the top of a block, a
-section of code enclosed in brackets { and }, before any statements.
+All variables must be declared before they are used. They must be declared at the top of a block, a section of code enclosed in brackets { and }, before any statements.
 
 ### Signed and Unsigned variables
 
@@ -70,7 +69,7 @@ For example, a 16-bit signed short can represent the numbers −32768 to 32767 (
 
 ## Operators
 
-The syntax for arithmetic and relational operators in C are similar to python in almost all cases. The logical operators in C are as follows:
+The syntax for arithmetic and relational operators in C are similar to Python in almost all cases. The logical operators in C are as follows:
 
 | Python         |      C           |
 | ------------- | ----------------- |
@@ -91,7 +90,7 @@ if (condition) {
 }
 ```
 
-The main difference between an if statement in Python and C is that In C the condition should be enclosed in an opening  and closing parenthesis and the body should be enclosed in a opening and closing curly braces.
+The main difference between an if statement in Python and C is that In C the condition should be enclosed in an opening and closing parenthesis and the body should be enclosed in opening and closing curly braces.
 
 ### if-else Ladder
 
@@ -116,7 +115,7 @@ else {
 }
 ```
 
-The applies to if-else ladder with the additional caveat that **elif** is replaced by **else if**. 
+The same applies to if-else ladder with the additional caveat that **elif** is replaced by **else if**. 
 
 ### Conditional expression
 
@@ -151,7 +150,7 @@ In **switch** statement the block whose value gets matched to the value passed t
 
 In Python the loops can be used as an iterator through different data structures, while in C this is not possible. In C, loops are used as a control structure to manage statements that are repeated. This also means that in C the exit and entry to the loop body are based on an expression evaluation.
 
-In addition, C also offers a **do-while** loop. While the **for** loop and **while** loop are entry controlled - the condition to enter the loop body is checked in the beginning of the loop execution. The do-wile loops is exit controlled - the condition to enter the loop body is checked at the end of loop execution. Which means that the loop is executed at least once. 
+In addition, C also offers a **do-while** loop. While the **for** loop and **while** loop are entry controlled - the condition to enter the loop body is checked in the beginning of the loop execution, the do-while loops is exit controlled - the condition to enter the loop body is checked at the end of loop execution. Which means that the loop is executed at least once. 
 
 ![loop](fig/forloop.png)
 
