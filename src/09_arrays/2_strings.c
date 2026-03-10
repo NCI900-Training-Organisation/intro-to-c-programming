@@ -14,13 +14,14 @@ void main()
     char str1[10] = "An array";
     printf(" 1 ----> ");
     for(int i = 0; i < 10; i++) {
-        printf("%c ", str1[i]);
+      printf("Character: '%c'  --->  ASCII value: %d\n", str1[i], str1[i]);
+
     }
     printf("\n");
 
     printf(" 2 ----> %s \n", str1);
 
-    str1[6] = '\0';
+    str1[6] = '\0'; // \0 is the null character, it marks the end of the string
     printf(" 3 ----> %s \n", str1);
 
     char *str2 = "Another array";
@@ -31,7 +32,7 @@ void main()
     }
     printf("\n");
 
-    printf(" 5 ----> ");
+    printf(" 5 ----> "); // pointer arithmetic
     for(int i = 0; '\0' != *(str2+i); i++) {
         printf("%c ", *(str2+i));
     }
@@ -47,5 +48,9 @@ void main()
     */
     //*(str2 + 4) = 'X';
     //printf(" 6 ----> %s \n", str2);
+
+    char str3[] = "The Third Array";   // array initialized with a copy of the bytes
+    str3[4] = 't';
+    printf("%s\n", str3);    
     
 }

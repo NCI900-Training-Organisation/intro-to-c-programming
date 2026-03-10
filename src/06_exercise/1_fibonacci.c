@@ -7,10 +7,7 @@ void main()
     // fill the printf statement
     //fill the for loop
     {
-        new = first + second;
-        first = second;
-        second = new;
-        printf("%d\n", new);
+        
     }
 
 }

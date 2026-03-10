@@ -12,4 +12,7 @@ void main()
         i = i +1;
     }while(i < 104);
 
+    printf("Value of i after the loop is %d \n", i);
+
+
 }

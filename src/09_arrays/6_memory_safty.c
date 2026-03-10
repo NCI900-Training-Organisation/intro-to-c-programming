@@ -7,7 +7,7 @@ void main(){
 
     printf("x[6] = %d \n", x[6]);
 
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 6; i++) {  // what happens if we try to access x[6] in a loop?
         printf("x[%d] = %d \n", i, x[i]);
     }
 

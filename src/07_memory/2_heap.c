@@ -1,11 +1,16 @@
+/*
+The heap memory region is designated for dynamically allocated storage and is handled explicitly by the programmer, rather than the compiler. Requests for memory allocation and de-allocation are managed through a set of standard library functions, granting the programmer full control over the lifespan of allocated memory blocks. While heap-allocated memory offers flexibility and control, it also entails added responsibility on the part of the programmer. Unlike stack memory, the compiler does not verify the correct management of memory, making dynamic memory errors a common source of subtle runtime bugs.
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int x = 100;
 
 int main() {
-    int *ptr = (int *) malloc(sizeof(int)); // Allocate memory on the heap
-    if (ptr == NULL) {
+    int *ptr = (int *) malloc(sizeof(int)); // Allocate memory on the heap, however, the pointer variable ptr itself is stored on the stack as a local variable.
+    if (ptr == NULL) { // Good practice to check if malloc succeeded
         printf("Memory allocation failed\n");
         return 1;
     }
@@ -18,7 +23,7 @@ int main() {
        2. ptr holds a memory address in the heap
        3. *ptr is uninitialised 
     */
-    printf("0 ---> *ptr = %d \n", *ptr); // Uninitialized value
+    printf("0 ---> *ptr = %d \n", *ptr); // Uninitialized value, it will print zero. Why?
 
     *ptr = x; // Store the value of global x in heap memory
 

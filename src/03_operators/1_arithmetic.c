@@ -11,5 +11,5 @@ void main()
     printf("a * b = %d \n", a * b);
     printf("a * b = %lf \n", (float)a / b);
     printf("-a / b = %d \n", -a / b); // C truncates the result towards zero
-    printf("a * b^c = %lf \n", a * pow(b, c) );
+    printf("a * b^c = %lf \n", a * pow(b, c) ); //pow is a function in math.h library
 }

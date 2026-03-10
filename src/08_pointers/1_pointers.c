@@ -11,7 +11,7 @@ void main()
     int *ptr = &x;
 
     printf("x    = %d \n", x);    /** print value of x */
-    printf("ptr  = %u \n", ptr);  /** print the address of x stored by ptr */
+    printf("ptr  = %p \n", (void*) ptr);  /** print the address of x stored by ptr */
     printf("*ptr = %d \n", *ptr); /** print the value in the address stored by ptr */
 
     printf("\nsize of an integer pointer  = %d bytes\n", sizeof(ptr));

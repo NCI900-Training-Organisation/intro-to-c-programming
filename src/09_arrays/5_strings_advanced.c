@@ -6,7 +6,7 @@ void main()
     printf("\n--- 1 ---->\n");
     for(int i = 0; i < 3; i++) {
         for(int j = 0; j < 20; j++) {   
-            printf("%c", str1[i][j]);
+            printf("%c", str1[i][j]); // prints raw bytes until it encounters a null character '\0'
         }
         printf("\n ");
     }
@@ -15,7 +15,7 @@ void main()
     char str2[3][20] = {"multi", "dimensional", "arrays"};
     printf("\n--- 2 ---->\n");
     for(int i = 0; i < 3; i++) {
-        printf("%s \n", str2[i]);
+        printf("%s \n", str2[i]); //prints as string until it encounters a null character '\0'
     }
 
 
@@ -28,7 +28,7 @@ void main()
     }
 
     
-    char *str3[3] = {"multi", "dimensional", "arrays"};
+    char *str3[3] = {"multi", "dimensional", "arrays"};  // str3 is an array of 3 pointers to char
 
     printf("\n--- 4 ---->\n");
     for(int i = 0; i < 3; i++) {
@@ -39,7 +39,7 @@ void main()
 
     printf("\n--- 5 ---->\n");
     for(int i = 0; i < 3; i++) {
-        printf("%s ", str3[0]+i);
+        printf("%s ", str3[0]+i); // shifts the pointers
     }
     printf("\n");
 
@@ -58,6 +58,5 @@ void main()
     printf("\n--- 8 ---->\n");
     for(int i = 0; i < 3; i++) {
         printf("%c \n", *(*(str4+i)+1));
-    }
-    
+    }    
 }

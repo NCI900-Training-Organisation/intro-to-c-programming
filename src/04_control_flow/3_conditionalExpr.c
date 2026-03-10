@@ -12,7 +12,6 @@ void main()
     */
     int max = (a > b) ? a : b;
 
-    /* In C, generally, the conversion rule will conver the operand of the type of less infomration to the other one to avoid losing information. */
     int min = (a< c) ? a : c;
 
     printf("Maximum value %d \n", max);

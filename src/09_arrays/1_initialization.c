@@ -39,7 +39,7 @@ void main()
 
 
     char d[10];
-    memset(d, 'a', 10);
+    memset(d, 'a', 10); // memset fill a specified number of bytes in a memory block with a particular character value
     printf("4 ----> ");
     for(int i = 0; i < 10; i++) {
         printf("%c ", d[i]);

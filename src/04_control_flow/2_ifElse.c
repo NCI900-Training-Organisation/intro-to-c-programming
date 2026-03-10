@@ -8,7 +8,7 @@ void main()
     if (a > 5) {
         b = b + 10;
         a = a - 2;
-        print("If condition - multple statement \n"); 
+        printf("If condition - multple statement \n"); 
     } // Note that there is no semicolon after the rifht brace that ends the block.
     else if ( (a <= 5) && (a < 100) ) {
         b = b - 10;
@@ -16,6 +16,6 @@ void main()
         printf("ElseIf condition - multple statement");
     }
     else {
-        print("Else condition");
+        printf("Else condition");
     }
 }

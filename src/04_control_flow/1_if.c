@@ -13,6 +13,6 @@ void main()
     if (a > 5) {
         b = b + 10;
         a = a - 2;
-        print("If condition - multple statement \n"); 
+        printf("If condition - multple statement \n"); 
     }
 }

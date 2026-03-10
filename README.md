@@ -187,6 +187,8 @@ As the address of the variable **x** starts with address 0X00, the pointer varia
 
 ## Dynamic Memory
 
+![memory](fig/memory_layout.png)
+
 C has five distinct areas of memory: 
 
 Text Segment: Once the program is compiled, it produces a binary file. This file is used to execute our program by loading it into RAM. Within this binary file are instructions, which are stored in the text segment of the memory. The text segment is allocated read-only permission to prevent inadvertent modifications to the program. 
