@@ -4,8 +4,8 @@
 #include "mathlib.h"
 
 int main(){
-    double a  =0.0;
-    double b=M_PI;
+    double a = 0.0;
+    double b= M_PI;
     int n =10;
 
     double result = integrate(sin, a, b, n);

@@ -21,7 +21,7 @@ void main()
     sum = add_by_val(a, b);
     printf("Sum    : %d\n", sum);
 
-    add_by_val(&a, &b, &sum);
+    add_by_ref(&a, &b, &sum);
     printf("Sum    : %d\n", sum);
 
 }
