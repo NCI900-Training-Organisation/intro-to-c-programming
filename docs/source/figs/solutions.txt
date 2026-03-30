@@ -1,0 +1,22 @@
+
+1. Open another tab and repeat the steps.
+
+2. Type the values instead of copy pasting the values. Try another browser in incognito mode.
+
+3. Same as 2
+
+4. This is a PBS problem. Just relaunch the job again.
+
+5. Same as 4.
+
+6. You need to wait half hour. Logout of ARE and login again. Use incognito mode.
+
+7. The user might have been logged out. Login again.
+
+8. /home/$USER directory is full. Delete files from the home folder.
+
+
+
+
+
+
