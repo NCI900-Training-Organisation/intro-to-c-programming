@@ -298,27 +298,73 @@ Heap
     standard library allocation/deallocation functions. It offers flexibility,
     but also requires careful memory management.
 
+
+In order to allocate memory dynamically on the heap, we can use the `malloc` function from the C standard library. The `malloc` function takes a single argument that specifies the number of bytes to allocate and returns a pointer to the allocated memory. For example, to allocate an array of 10 integers, we can use the following code:
 .. image:: ../../../fig/malloc.png
     :alt: malloc diagram
 
+In this example, `malloc` allocates 4 bytes of memory and returns a pointer to the first byte of the allocated memory. We can then use this pointer to access the allocated memory as an array of integers. 
+
 .. image:: ../../../fig/dynamic_mem.png
     :alt: dynamic memory diagram
+
+However, hard coding the size of the array is not ideal. Instead, we can use the `sizeof` operator to determine the size of the data type and calculate the total number of bytes needed for the array. For example, to allocate an array of `n` integers, we can use the following code:
+
+.. code-block:: c
+
+    int n = 10; // or any desired size
+    int *arr = (int *)malloc(n * sizeof(int));
+
+This allocates enough memory for `n` integers and returns a pointer to the allocated memory. It is important to check if `malloc` returns `NULL`, which indicates that the allocation failed due to insufficient memory. 
+
+
+..code-block:: c
+
+    if (arr == NULL) {
+         // handle allocation failure
+    }
+
+After we are done using the dynamically allocated memory, we should free it using the `free` function to avoid memory leaks:
+
+.. code-block:: c
+
+    free(arr);
 
 
 Array
 -----
 
+In C, there is a strong relationship between pointers and arrays. Any operation that can be achieved by array subscripting can also be achieved by pointer arithmetic.
+
+Here we define an array of 4 integers:
 .. image:: ../../../fig/array_int.png
     :alt: integer array diagram
 
+Note that the array elements are stored contiguously in increasing address order. The name of the array (e.g. `arr`) is a pointer to the first element of the array (i.e. `&arr[0]`). 
+This is known as the array-to-pointer decay. Therefore, `arr` and `&arr[0]` are equivalent. We can also use pointer arithmetic to access array elements. For example, `*(arr + 2)` is equivalent to `arr[2]` and gives us the value of the third element of the array.
+
+
+Likewise, we can define an array of characters (i.e. a string):
 .. image:: ../../../fig/array_char.png
     :alt: character array diagram
 
+As such there is no built-in string type in C. Instead, strings are represented as arrays of characters terminated by a null character (`'\0'`), which indicates the end of the string. The same as array of integers, the name of the array (e.g. `str`) is a pointer to the first character of the string (i.e. `&str[0]`). Therefore, `str` and `&str[0]` are equivalent. We can also use pointer arithmetic to access characters in the string. For example, `*(str + 4)` is equivalent to `str[4]` and gives us the value of the fifth character of the string.
+
+
+Multidimensional Arrays
+----------------------
+In C, multidimensional arrays are stored in row-major order. This means that the elements of the first row are stored contiguously in memory, followed by the elements of the second row, and so on. For example, a 2D array of integers with 2 rows and 4 columns is stored as follows:
 .. image:: ../../../fig/array_multi.png
     :alt: multidimensional array diagram
 
+Clearly, an array in C is homogenenous: all elements must be of the same type. If we want to store different types of data together, we can use structures instead.
+
+As discussed before, local arrays are often allocated on the stack, so their maximum size is limited by available stack space. In C, many arrays have a compile-time constant size, but C can also support variable-length arrays whose size is determined at runtime (where supported). If you need an array that is very large or whose size must be chosen or resized at runtime, you can allocate it dynamically on the heap using malloc (and optionally realloc to resize). In that case, you typically use a pointer variable (often a local variable) to store the address of the heap-allocated array.
+For example, we can create a dynamic array of integers as follows:
+
 .. image:: ../../../fig/dynamic_mem_arr.png
     :alt: dynamic array diagram
+
 
 
 Functions
