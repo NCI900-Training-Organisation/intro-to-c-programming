@@ -390,12 +390,29 @@ Note the return type is `int`. Because C has been system programming language si
 
 Structure
 ---------
-Previously we discussed that the array in C is homogenenous, meaning all elements must be of the same type. If we want to store different types of data together, we can use structures instead. A structure in C is a user-defined data type that groups together related variables of different types under a single name. Each variable within a structure is called a member. For example, we can define a structure to represent a student's ID as follows:
+Previously we discussed that the array in C is homogeneous, meaning all elements must be of the same type. If we want to store different types of data together, we can use structures instead. A structure in C is a user-defined data type that groups together related variables of different types under a single name. Each variable within a structure is called a member. For example, we can define a structure to represent a student's ID as follows:
 
-.. image:: ../../../fig/structures.png
-    :alt: structures diagram
+.. code-block:: c
 
-In this example, we define a structure named `Student` that has three members: `id` (an integer), `name` (a character array of size 50),We can then create variables of type `Student` to store information about different students. 
+    struct Student {
+         int id;
+         char name[50];
+    };
+
+In this example, we define a structure named `Student` that has two members: `id` (an integer), `name` (a character array of size 50), we can then create variables of type `Student` to store information about different students. 
+
+
+.. code-block:: c
+
+    struct Student student1;
+    struct Student student2;
+
+    student1.id = 12345;
+    strcpy(student1.name, "Alice");
+    student2.id = 67890;
+    strcpy(student2.name, "Bob");
+
+
 
 Stages of Compiling
 -------------------
