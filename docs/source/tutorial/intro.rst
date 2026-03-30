@@ -388,14 +388,14 @@ However, most of the time C functions are call-by-reference. This means that ins
 Note the return type is `int`. Because C has been system programming language since its inception, it is common for functions to return an integer status code to indicate success or failure of the function, while the actual result is returned through a pointer argument (i.e. `result` in this case). The caller can then check the return value to determine if the function executed successfully and access the result through the pointer.
 
 
-
-
 Structure
 ---------
+Previously we discussed that the array in C is homogenenous, meaning all elements must be of the same type. If we want to store different types of data together, we can use structures instead. A structure in C is a user-defined data type that groups together related variables of different types under a single name. Each variable within a structure is called a member. For example, we can define a structure to represent a student's ID as follows:
 
 .. image:: ../../../fig/structures.png
     :alt: structures diagram
 
+In this example, we define a structure named `Student` that has three members: `id` (an integer), `name` (a character array of size 50),We can then create variables of type `Student` to store information about different students. 
 
 Stages of Compiling
 -------------------
