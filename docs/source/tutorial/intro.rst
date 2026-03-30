@@ -370,8 +370,24 @@ For example, we can create a dynamic array of integers as follows:
 Functions
 ---------
 
+Much like in Python, functions in C are reusable blocks of code that perform a specific task. They allow us to break down complex problems into smaller, more manageable pieces. A function in C consists of a return type, a name, a parameter list enclosed in parentheses, and a body enclosed in curly braces. For example, here is a simple function that adds two integers and returns the half of their sum:
 .. image:: ../../../fig/functions.png
     :alt: functions diagram
+
+In this example, function `incValue` takes two integer parameters `a` and `b`, calculates their sum, divides it by 2, and returns the result as a float. The return type of the function is specified as `float`, which indicates that the function will return a float value. This is a call-by-value function.
+
+However, most of the time C functions are call-by-reference. This means that instead of passing the actual values of the arguments, we pass the addresses of the variables. This allows the function to modify the values of the arguments in the caller's scope. This differs from Python, since mainly achieve their “outcome” through side effects instead of returning the primary result.
+
+.. code-block:: c
+
+    int incValue(int a, int b, float *result) {
+         *result = (a + b) / 2.0;
+         return 0;
+    }
+
+Note the return type is `int`. Because C has been system programming language since its inception, it is common for functions to return an integer status code to indicate success or failure of the function, while the actual result is returned through a pointer argument (i.e. `result` in this case). The caller can then check the return value to determine if the function executed successfully and access the result through the pointer.
+
+
 
 
 Structure
